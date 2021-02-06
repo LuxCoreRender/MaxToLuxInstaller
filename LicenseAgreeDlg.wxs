@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--//**********************************************************************/
+// Copyright (c) 2015-2021 Luxrender.
+// All rights reserved.
+//
+//**************************************************************************/
+// DESCRIPTION: Contains the Dll Entry stuff
+// AUTHOR: Omid Ghotbi (TAO) omid.ghotbi@gmail.com www.3dfine.com
+//***************************************************************************/-->
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Fragment>
+    <UI Id="LicenseAgreeDialogUI">
+
+      <DialogRef Id="VersionSelectDlg"/>
+      
+      <Property Id="IAGREE" Secure="yes" />
+      <Property Id="License">Licensebtn</Property>
+      <Binary Id="Licensebtn" SourceFile="Resources/btAgree.png"/>
+      <Property Id="Back">backbtn</Property>
+      <Binary Id="backbtn" SourceFile="Resources/btBack.png"/>
+      <!--<Binary Id="headerImage" SourceFile="images/header.bmp"/>-->
+
+      <Dialog Id="LicenseAgreeDlg" Width="555" Height="416" Title="LuxCoreRender : License Agreement">
+
+        <Control Id="background" Type="Bitmap" Text="bgImage" Width="555" Height="416" X="0" Y="0" TabSkip="no" FixedSize="yes" />
+        <!--<Control Id="header" Type="Bitmap" Text="headerImage" Height="50" Width="400" X="0" Y="0" TabSkip="no" />-->
+        <!--<Control Id="headerText"  Type="Text" X="65" Y="10" Width="744" Height="40" Transparent="yes" Text="{\TahomaBig}User Registration" />-->
+
+        <Control Id="explanationText" X="230" Y="100" Width="295" Height="100" NoWrap="no" RightAligned="no" Transparent="yes" Type="Text" Text="{\TahomaNormal}Before you can install this plugin (MaxToLux) you must agree the license terms and conditions. Click on the Cancel button to exit." />
+
+        <!--<Control Id="nameLabel" Type="Text" X="85" Y="120" Height="17" Width="65" Transparent="yes" Text="{\TahomaNormal}Your Full Name:" />
+        <Control Id="nameTextbox" Type="Edit" X="150" Y="117"  Height="17" Width="120" Property="FULLNAMEProperty"  />
+
+        <Control Id="emailLabel" Type="Text" X="85" Y="140" Height="17" Width="65" Transparent="yes" Text="{\TahomaNormal}Your E-mail:" />
+        <Control Id="emailTextbox" Type="Edit" X="150" Y="137"  Height="17" Width="120" Property="EMAILProperty"  />-->
+
+        <Control Id="AgreementText" Type="ScrollableText" X="226" Y="130" Width="300" Height="200" Sunken="yes" TabSkip="yes" >
+          <Text SourceFile="Resources\License.rtf" />
+        </Control>
+        <Control Id="AuthenticationType" Type="CheckBox" X="226" Y="338" Width="10" Height="10" CheckBoxValue="1" Property="IAGREE" Text="{}" FixedSize="yes" ></Control>
+        <Control Id="agreeText" X="242" Y="338" NoWrap="no" RightAligned="no" Transparent="yes" Type="Text" Width="250" Height="12" Text="{\TahomaNormal}I agree to the terms and conditions." />
+
+        <!--<Control Id="backLicenseButton" Type="PushButton" Text="[Back]" X="290" Y="380" Width="75" Height="18" Bitmap="yes" FixedSize="yes">
+          <Publish Event="NewDialog" Value="SetupDialog" >1</Publish>
+          <Publish Event="EndDialog" Value="Return">1</Publish>
+        </Control>-->
+        
+        <Control Id="LicenseButton" Type="PushButton" Text="[License]" X="375" Y="380" Width="75" Height="18" Bitmap="yes" FixedSize="yes">
+          <Publish Event="DoAction" Value="RegistrationCustomAction1">1</Publish>
+          <!--<Publish Event="NewDialog" Value="PathSelectDialog" />-->
+          <Condition Action="disable"><![CDATA[IAGREE <> "1"]]></Condition>
+          <Condition Action="enable"><![CDATA[IAGREE = "1"]]></Condition>
+          <Publish Event="EndDialog" Value="Return">1</Publish>
+        </Control>
+
+        <Control Id="cancelButton" Type="PushButton" Text="[Cancel]" X="460" Y="380" Width="75" Height="18" Cancel="yes" Bitmap="yes" FixedSize="yes">
+          <Publish Event="EndDialog" Value="Exit" />
+        </Control>
+
+      </Dialog>
+
+    </UI>
+
+    <InstallUISequence>
+      <Show Dialog="LicenseAgreeDlg" After="SetupDialog" />
+    </InstallUISequence>
+
+  </Fragment>
+
+  <!-- Call C# Function from Wix-Toolset, I just add it to be used later to save user data and other stuff in the future. -->
+  <Fragment>
+    <Binary Id="CustomCSharpAction1" SourceFile="$(var.RegistrationInputCustomAction.TargetDir)$(var.RegistrationInputCustomAction.TargetName).CA.dll"/>
+    <CustomAction Id="RegistrationCustomAction1" BinaryKey="CustomCSharpAction1" DllEntry="SaveUserInput"  />
+  </Fragment>
+
+</Wix>
