@@ -1,5 +1,5 @@
 # MaxToLux Installer
-MaxToLux Installer base on Wix toolset 
+MaxToLux Installer, is an installer for 3ds max LuxCoreRenderer plugin.
 
 ![alt text](https://3dfine.com/content/MaxToLux-installer-Wix.jpg)
 
