@@ -1,7 +1,7 @@
 # MaxToLux Installer
 MaxToLux Installer, is an installer for 3ds max LuxCoreRenderer plugin.
 
-![alt text](https://3dfine.com/content/MaxToLux-installer.jpg)
+![alt text](https://3dfine.com/content/MaxToLux_installer.jpg)
 
 To build from source code you will need to install Wix Toolset v3 or higher from https://wixtoolset.org/ - The WiX toolset lets developers create installers for Windows Installer, the Windows installation engine. it is opensource and free of charge.
 For best experience you can install Wix Toolset extention for visual studio from WixToolset website or visual studio market place.
