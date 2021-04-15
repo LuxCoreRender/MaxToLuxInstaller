@@ -15,6 +15,7 @@
       <Property Id="INSTALLSELECT2019" Secure="yes" />
       <Property Id="INSTALLSELECT2020" Secure="yes" />
       <Property Id="INSTALLSELECT2021" Secure="yes" />
+      <Property Id="INSTALLSELECT2022" Secure="yes" />
 
       <DialogRef Id="PathSelectDialog"/>
 
@@ -36,26 +37,42 @@
         <Control Id="selectMax2019" Type="CheckBox" X="230" Y="210" Width="10" Height="10" CheckBoxValue="1" Property="INSTALLSELECT2019" Text="{}" FixedSize="yes" >
           <Publish Property="INSTALLSELECT2020" Value="{}" Order="2"><![CDATA[INSTALLSELECT2019 = "1"]]></Publish>
           <Publish Property="INSTALLSELECT2021" Value="{}" Order="2"><![CDATA[INSTALLSELECT2019 = "1"]]></Publish>
+          <Publish Property="INSTALLSELECT2022" Value="{}" Order="2"><![CDATA[INSTALLSELECT2019 = "1"]]></Publish>
           <Publish Property="ROOTDIR" Value="[%ADSK_3DSMAX_x64_2019]" Order="2"><![CDATA[INSTALLSELECT2019 = "1"]]></Publish>
           <Publish Property="MAX2019" Value="1" Order="2"><![CDATA[INSTALLSELECT2019 = "1"]]></Publish>
           <Publish Property="MAX2020" Value="{}" Order="2"><![CDATA[INSTALLSELECT2019 = "1"]]></Publish>
           <Publish Property="MAX2021" Value="{}" Order="2"><![CDATA[INSTALLSELECT2019 = "1"]]></Publish>
+          <Publish Property="MAX2022" Value="{}" Order="2"><![CDATA[INSTALLSELECT2019 = "1"]]></Publish>
         </Control>
         <Control Id="selectMax2020" Type="CheckBox" X="230" Y="230" Width="10" Height="10" CheckBoxValue="1" Property="INSTALLSELECT2020" Text="{}" FixedSize="yes" >
           <Publish Property="INSTALLSELECT2019" Value="{}" Order="2"><![CDATA[INSTALLSELECT2020 = "1"]]></Publish>
           <Publish Property="INSTALLSELECT2021" Value="{}" Order="2"><![CDATA[INSTALLSELECT2020= "1"]]></Publish>
+          <Publish Property="INSTALLSELECT2022" Value="{}" Order="2"><![CDATA[INSTALLSELECT2020= "1"]]></Publish>
           <Publish Property="ROOTDIR" Value="[%ADSK_3DSMAX_x64_2020]" Order="2"><![CDATA[INSTALLSELECT2020 = "1"]]></Publish>
           <Publish Property="MAX2019" Value="{}" Order="2"><![CDATA[INSTALLSELECT2020 = "1"]]></Publish>
           <Publish Property="MAX2020" Value="1" Order="2"><![CDATA[INSTALLSELECT2020 = "1"]]></Publish>
           <Publish Property="MAX2021" Value="{}" Order="2"><![CDATA[INSTALLSELECT2020 = "1"]]></Publish>
+          <Publish Property="MAX2022" Value="{}" Order="2"><![CDATA[INSTALLSELECT2020 = "1"]]></Publish>
         </Control>
         <Control Id="selectMax2021" Type="CheckBox" X="230" Y="250" Width="10" Height="10" CheckBoxValue="1" Property="INSTALLSELECT2021" Text="{}" FixedSize="yes" >
           <Publish Property="INSTALLSELECT2019" Value="{}" Order="2"><![CDATA[INSTALLSELECT2021 = "1"]]></Publish>
           <Publish Property="INSTALLSELECT2020" Value="{}" Order="2"><![CDATA[INSTALLSELECT2021= "1"]]></Publish>
+          <Publish Property="INSTALLSELECT2022" Value="{}" Order="2"><![CDATA[INSTALLSELECT2021= "1"]]></Publish>
           <Publish Property="ROOTDIR" Value="[%ADSK_3DSMAX_x64_2021]" Order="2"><![CDATA[INSTALLSELECT2021 = "1"]]></Publish>
           <Publish Property="MAX2019" Value="{}" Order="2"><![CDATA[INSTALLSELECT2021 = "1"]]></Publish>
           <Publish Property="MAX2020" Value="{}" Order="2"><![CDATA[INSTALLSELECT2021 = "1"]]></Publish>
           <Publish Property="MAX2021" Value="1" Order="2"><![CDATA[INSTALLSELECT2021 = "1"]]></Publish>
+          <Publish Property="MAX2022" Value="{}" Order="2"><![CDATA[INSTALLSELECT2021 = "1"]]></Publish>
+        </Control>
+        <Control Id="selectMax2022" Type="CheckBox" X="230" Y="270" Width="10" Height="10" CheckBoxValue="1" Property="INSTALLSELECT2022" Text="{}" FixedSize="yes" >
+          <Publish Property="INSTALLSELECT2019" Value="{}" Order="2"><![CDATA[INSTALLSELECT2022 = "1"]]></Publish>
+          <Publish Property="INSTALLSELECT2020" Value="{}" Order="2"><![CDATA[INSTALLSELECT2022= "1"]]></Publish>
+          <Publish Property="INSTALLSELECT2021" Value="{}" Order="2"><![CDATA[INSTALLSELECT2022= "1"]]></Publish>
+          <Publish Property="ROOTDIR" Value="[%ADSK_3DSMAX_x64_2022]" Order="2"><![CDATA[INSTALLSELECT2022 = "1"]]></Publish>
+          <Publish Property="MAX2019" Value="{}" Order="2"><![CDATA[INSTALLSELECT2022 = "1"]]></Publish>
+          <Publish Property="MAX2020" Value="{}" Order="2"><![CDATA[INSTALLSELECT2022 = "1"]]></Publish>
+          <Publish Property="MAX2021" Value="{}" Order="2"><![CDATA[INSTALLSELECT2022 = "1"]]></Publish>
+          <Publish Property="MAX2022" Value="1" Order="2"><![CDATA[INSTALLSELECT2022 = "1"]]></Publish>
         </Control>
 
         <Control Id="max2019" X="250" Y="210" NoWrap="no" RightAligned="no" Transparent="yes" Type="Text" Width="250" Height="12" Text="{\TahomaNormal}Autodesk 3dsMax 2019" >
@@ -70,11 +87,16 @@
           <!--<Condition Action="enable"><![CDATA[INSTALLSELECT2021 = "1"]]></Condition>
           <Condition Action="disable"><![CDATA[INSTALLSELECT2021<> "1"]]></Condition>-->
         </Control>
+        <Control Id="max2022" X="250" Y="270" NoWrap="no" RightAligned="no" Transparent="yes" Type="Text" Width="250" Height="12" Text="{\TahomaNormal}Autodesk 3dsMax 2022" >
+          <!--<Condition Action="enable"><![CDATA[INSTALLSELECT2021 = "1"]]></Condition>
+          <Condition Action="disable"><![CDATA[INSTALLSELECT2021<> "1"]]></Condition>-->
+        </Control>
 
         <Control Id="VersionButton" Type="PushButton" Text="[Next]" X="375" Y="380" Width="75" Height="18" Bitmap="yes" FixedSize="yes" Disabled="yes">
           <Condition Action="enable"><![CDATA[INSTALLSELECT2019 = "1"]]></Condition>
           <Condition Action="enable"><![CDATA[INSTALLSELECT2020 = "1"]]></Condition>
           <Condition Action="enable"><![CDATA[INSTALLSELECT2021 = "1"]]></Condition>
+          <Condition Action="enable"><![CDATA[INSTALLSELECT2022 = "1"]]></Condition>
           <Publish Event="EndDialog" Value="Return">1</Publish>
         </Control>
 

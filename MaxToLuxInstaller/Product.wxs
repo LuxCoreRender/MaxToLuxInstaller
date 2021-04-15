@@ -8,7 +8,7 @@
 // AUTHOR: Omid Ghotbi (TAO) omid.ghotbi@gmail.com www.3dfine.com
 //***************************************************************************/-->
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
-	<Product Id="{46F238B5-47BE-4E88-87D6-EDF5151D22F8}" Name="MaxToLuxWix" Language="1033" Version="0.7.1.7" Manufacturer="LuxCoreRenderer" UpgradeCode="1c6476c4-3c1f-478b-8597-7c0f6fe13a9c">
+	<Product Id="{46F238B5-47BE-4E88-87D6-EDF5151D22F8}" Name="MaxToLuxWix" Language="1033" Version="0.8.7.9" Manufacturer="LuxCoreRenderer" UpgradeCode="1c6476c4-3c1f-478b-8597-7c0f6fe13a9c">
 		<Package InstallerVersion="300" Compressed="yes" Platform="x64" InstallScope="perMachine" />
     <Icon Id="icon.ico" SourceFile="Resources\icon.ico"/>
     <Property Id="ARPPRODUCTICON" Value="icon.ico" />
@@ -19,6 +19,7 @@
     <Property Id="MAX2019" Value="{}" Secure="yes" />
     <Property Id="MAX2020" Value="{}" Secure="yes" />
     <Property Id="MAX2021" Value="{}" Secure="yes" />
+    <Property Id="MAX2022" Value="{}" Secure="yes" />
     
     <Binary Id="bgImage" SourceFile="Resources/Bg.png" />
     <Binary Id="cancelbtn" SourceFile="Resources/btCancel.png"/>
@@ -64,7 +65,7 @@
             <!--<RemoveFolder Id='_81A2B7A5_A2B8_4E93_9F57_18E27FBCED19' On='uninstall' />-->
           </Component>
           <Component Id='MultiAreaLight.jpg' Guid='EFCFDE58-A9CD-4671-A5E1-2E771C7DC341' Permanent='no' SharedDllRefCount='no' Transitive='no'>
-            <File Id='_MultiAreaLight.jpg' DiskId='1' Hidden='no' ReadOnly='no' System='no' Vital='yes'  Name='Multi-Area-Light.jpg' Source='..\..\Build\Plugin DLL 3dsmax root\LuxMap\Multi-Area-Light.jpg' KeyPath='yes' />
+            <File Id='_MultiAreaLight.jpg' DiskId='1' Hidden='no' ReadOnly='no' System='no' Vital='yes'  Name='Multi-Area-Light.jpg' Source='..\..\Build\Plugin DLL 3dsmax root\LuxMaps\Multi-Area-Light.jpg' KeyPath='yes' />
             <!--<RemoveFolder Id='_81A2B7A5_A2B8_4E93_9F57_18E27FBCED49' On='uninstall' />-->
           </Component>
         </Directory>
@@ -80,6 +81,9 @@
         <Component Id='MaxToLux2021.dlr' Guid='6de1af73-bb52-44fe-b9e0-1fbedea7d798' Permanent='no' SharedDllRefCount='no' Transitive='no'>
           <File Id='_MaxToLux2021.dlr' DiskId='1' Hidden='no' ReadOnly='no' System='no' Vital='yes'  Name='MaxToLux2021.dlr' Source='..\..\Build\v2021\MaxToLux2021.dlr' KeyPath='yes' />
         </Component>
+        <Component Id='MaxToLux2022.dlr' Guid='41B72DD1-A386-43D7-8A6A-1FAFC5BE185B' Permanent='no' SharedDllRefCount='no' Transitive='no'>
+          <File Id='_MaxToLux2022.dlr' DiskId='1' Hidden='no' ReadOnly='no' System='no' Vital='yes'  Name='MaxToLux2022.dlr' Source='..\..\Build\v2022\MaxToLux2022.dlr' KeyPath='yes' />
+        </Component>
         <Component Id='LuxObjects2019.dlo' Guid='9cc9ff1f-d32b-45ce-ba74-4e1854547f42' Permanent='no' SharedDllRefCount='no' Transitive='no'>
           <File Id='_LuxObjects2019.dlo' DiskId='1' Hidden='no' ReadOnly='no' System='no' Vital='yes'  Name='LuxObjects2019.dlo' Source='..\..\Build\v2019\LuxObjects2019.dlo' KeyPath='yes' />
         </Component>
@@ -88,6 +92,9 @@
         </Component>
         <Component Id='LuxObjects2021.dlo' Guid='9cc9ff1f-d32b-45ce-ba74-4e1854549f44' Permanent='no' SharedDllRefCount='no' Transitive='no'>
           <File Id='_LuxObjects2021.dlo' DiskId='1' Hidden='no' ReadOnly='no' System='no' Vital='yes'  Name='LuxObjects2021.dlo' Source='..\..\Build\v2021\LuxObjects2021.dlo' KeyPath='yes' />
+        </Component>
+        <Component Id='LuxObjects2022.dlo' Guid='9AC41824-098A-40DA-9F7D-AE8EE1465627' Permanent='no' SharedDllRefCount='no' Transitive='no'>
+          <File Id='_LuxObjects2022.dlo' DiskId='1' Hidden='no' ReadOnly='no' System='no' Vital='yes'  Name='LuxObjects2022.dlo' Source='..\..\Build\v2022\LuxObjects2022.dlo' KeyPath='yes' />
         </Component>
         <Component Id='LuxMaterial2019.dlt' Guid='23cd95d3-51c1-497c-84fe-c1378214f7cf' Permanent='no' SharedDllRefCount='no' Transitive='no'>
           <File Id='_LuxMaterial2019.dlt' DiskId='1' Hidden='no' ReadOnly='no' System='no' Vital='yes'  Name='LuxMaterial2019.dlt' Source='..\..\Build\v2019\LuxMaterial2019.dlt' KeyPath='yes' />
@@ -98,14 +105,20 @@
         <Component Id='LuxMaterial2021.dlt' Guid='23cd95d3-51c1-497c-84fe-c1378216f9cf' Permanent='no' SharedDllRefCount='no' Transitive='no'>
           <File Id='_LuxMaterial2021.dlt' DiskId='1' Hidden='no' ReadOnly='no' System='no' Vital='yes'  Name='LuxMaterial2021.dlt' Source='..\..\Build\v2021\LuxMaterial2021.dlt' KeyPath='yes' />
         </Component>
+        <Component Id='LuxMaterial2022.dlt' Guid='B34132F7-A50A-45CE-9B11-B77CF3A1E176' Permanent='no' SharedDllRefCount='no' Transitive='no'>
+          <File Id='_LuxMaterial2022.dlt' DiskId='1' Hidden='no' ReadOnly='no' System='no' Vital='yes'  Name='LuxMaterial2022.dlt' Source='..\..\Build\v2022\LuxMaterial2022.dlt' KeyPath='yes' />
+        </Component>
         <Component Id='LuxMap2019.dlt' Guid='e6fb7d9f-536f-4189-987c-4f5a601fb10f' Permanent='no' SharedDllRefCount='no' Transitive='no'>
           <File Id='_LuxMap2019.dlt' DiskId='1' Hidden='no' ReadOnly='no' System='no' Vital='yes'  Name='LuxMap2019.dlt' Source='..\..\Build\v2019\LuxMap2019.dlt' KeyPath='yes' />
         </Component>
         <Component Id='LuxMap2020.dlt' Guid='e6fb7d9f-536f-4189-987c-4f5a601fb21f' Permanent='no' SharedDllRefCount='no' Transitive='no'>
           <File Id='_LuxMap2020.dlt' DiskId='1' Hidden='no' ReadOnly='no' System='no' Vital='yes'  Name='LuxMap2020.dlt' Source='..\..\Build\v2020\LuxMap2020.dlt' KeyPath='yes' />
         </Component>
-          <Component Id='LuxMap2021.dlt' Guid='e6fb7d9f-536f-4189-987c-4f5a601fb32f' Permanent='no' SharedDllRefCount='no' Transitive='no'>
+        <Component Id='LuxMap2021.dlt' Guid='e6fb7d9f-536f-4189-987c-4f5a601fb32f' Permanent='no' SharedDllRefCount='no' Transitive='no'>
           <File Id='_LuxMap2021.dlt' DiskId='1' Hidden='no' ReadOnly='no' System='no' Vital='yes'  Name='LuxMap2021.dlt' Source='..\..\Build\v2021\LuxMap2021.dlt' KeyPath='yes' />
+        </Component>
+        <Component Id='LuxMap2022.dlt' Guid='E8EEF2EC-624E-4BA0-9936-C6640B0994EA' Permanent='no' SharedDllRefCount='no' Transitive='no'>
+          <File Id='_LuxMap2022.dlt' DiskId='1' Hidden='no' ReadOnly='no' System='no' Vital='yes'  Name='LuxMap2022.dlt' Source='..\..\Build\v2022\LuxMap2022.dlt' KeyPath='yes' />
         </Component>
 
         <Directory Id='LANGDIR' Name='en-US'>
@@ -121,23 +134,32 @@
           <Component Id="LuxMap2021.dlt.mui" Guid="945446ad-8002-4530-a1a9-2aa5c67b24ae" Permanent='no' SharedDllRefCount='no' Transitive='no'>
             <File Id="_LuxMap2021.dlt.mui" DiskId='1' Hidden='no' ReadOnly='no' System='no' Vital='yes'  Name='LuxMap2021.dlt.mui' Source="..\..\Build\v2021\en-US\LuxMap2021.dlt.mui" KeyPath="yes"/>
           </Component>
+          <Component Id="LuxMap2022.dlt.mui" Guid="9138DC7A-20B8-446A-BF52-75375C83F7EC" Permanent='no' SharedDllRefCount='no' Transitive='no'>
+            <File Id="_LuxMap2022.dlt.mui" DiskId='1' Hidden='no' ReadOnly='no' System='no' Vital='yes'  Name='LuxMap2022.dlt.mui' Source="..\..\Build\v2022\en-US\LuxMap2022.dlt.mui" KeyPath="yes"/>
+          </Component>
           <Component Id="LuxMaterial2019.dlt.mui" Guid="13a2f6f8-ae30-4177-8c17-08ffd7c74d56" Permanent='no' SharedDllRefCount='no' Transitive='no'>
             <File Id="_LuxMaterial.dlt2019" DiskId='1' Hidden='no' ReadOnly='no' System='no' Vital='yes'  Name='LuxMaterial2019.dlt.mui' Source="..\..\Build\v2019\en-US\LuxMaterial2019.dlt.mui" KeyPath="yes"/>
           </Component>
           <Component Id="LuxMaterial2020.dlt.mui" Guid="13a2f6f8-ae30-4177-8c17-08ffd7c74d67" Permanent='no' SharedDllRefCount='no' Transitive='no'>
             <File Id="_LuxMaterial2020.dlt.mui" DiskId='1' Hidden='no' ReadOnly='no' System='no' Vital='yes'  Name='LuxMaterial2020.dlt.mui' Source="..\..\Build\v2020\en-US\LuxMaterial2020.dlt.mui" KeyPath="yes"/>
           </Component>
-        <Component Id="LuxMaterial2021.dlt.mui" Guid="13a2f6f8-ae30-4177-8c17-08ffd7c74d78" Permanent='no' SharedDllRefCount='no' Transitive='no'>
+          <Component Id="LuxMaterial2021.dlt.mui" Guid="13a2f6f8-ae30-4177-8c17-08ffd7c74d78" Permanent='no' SharedDllRefCount='no' Transitive='no'>
             <File Id="_LuxMaterial2021.dlt.mui" DiskId='1' Hidden='no' ReadOnly='no' System='no' Vital='yes'  Name='LuxMaterial2021.dlt.mui' Source="..\..\Build\v2021\en-US\LuxMaterial2021.dlt.mui" KeyPath="yes"/>
+          </Component>
+          <Component Id="LuxMaterial2022.dlt.mui" Guid="F26E3881-8E9E-41A7-AD29-29950908ABAB" Permanent='no' SharedDllRefCount='no' Transitive='no'>
+            <File Id="_LuxMaterial2022.dlt.mui" DiskId='1' Hidden='no' ReadOnly='no' System='no' Vital='yes'  Name='LuxMaterial2022.dlt.mui' Source="..\..\Build\v2022\en-US\LuxMaterial2022.dlt.mui" KeyPath="yes"/>
           </Component>
           <Component Id="LuxObjects2019.dlo.mui" Guid="561506b4-1b08-477e-9309-e85fad8971f8" Permanent='no' SharedDllRefCount='no' Transitive='no'>
             <File Id="_LuxObjects2019.dlo.mui" DiskId='1' Hidden='no' ReadOnly='no' System='no' Vital='yes'  Name='LuxObjects2019.dlo.mui' Source="..\..\Build\v2019\en-US\LuxObjects2019.dlo.mui" KeyPath="yes"/>
           </Component>
-        <Component Id="LuxObjects2020.dlo.mui" Guid="561506b4-1b08-477e-9309-e85fad8972f9" Permanent='no' SharedDllRefCount='no' Transitive='no'>
+          <Component Id="LuxObjects2020.dlo.mui" Guid="561506b4-1b08-477e-9309-e85fad8972f9" Permanent='no' SharedDllRefCount='no' Transitive='no'>
             <File Id="_LuxObjects2020.dlo.mui" DiskId='1' Hidden='no' ReadOnly='no' System='no' Vital='yes'  Name='LuxObjects2020.dlo.mui' Source="..\..\Build\v2020\en-US\LuxObjects2020.dlo.mui" KeyPath="yes"/>
           </Component>
-        <Component Id="LuxObjects2021.dlo.mui" Guid="561506b4-1b08-477e-9309-e85fad8973f0" Permanent='no' SharedDllRefCount='no' Transitive='no'>
+          <Component Id="LuxObjects2021.dlo.mui" Guid="561506b4-1b08-477e-9309-e85fad8973f0" Permanent='no' SharedDllRefCount='no' Transitive='no'>
             <File Id="_LuxObjects2021.dlo.mui" DiskId='1' Hidden='no' ReadOnly='no' System='no' Vital='yes'  Name='LuxObjects2021.dlo.mui' Source="..\..\Build\v2021\en-US\LuxObjects2021.dlo.mui" KeyPath="yes"/>
+          </Component>
+          <Component Id="LuxObjects2022.dlo.mui" Guid="3B0D8168-D140-4DF6-A88B-671292002386" Permanent='no' SharedDllRefCount='no' Transitive='no'>
+            <File Id="_LuxObjects2022.dlo.mui" DiskId='1' Hidden='no' ReadOnly='no' System='no' Vital='yes'  Name='LuxObjects2022.dlo.mui' Source="..\..\Build\v2022\en-US\LuxObjects2022.dlo.mui" KeyPath="yes"/>
           </Component>
         </Directory>
         
@@ -200,6 +222,24 @@
       <ComponentRef Id='dirLUXMAPS' />
       <ComponentRef Id='MultiAreaLight.jpg' />
     </ComponentGroup>
+
+    <ComponentGroup Id='Max2022Selected'>
+      <ComponentRef Id='luxcore.dll' />
+      <ComponentRef Id='embree3.dll' />
+      <ComponentRef Id='OpenImageIO_LuxCore.dll' />
+      <ComponentRef Id='OpenImageDenoise.dll' />
+      <ComponentRef Id='tbb.dll' />
+      <ComponentRef Id='MaxToLux2022.dlr' />
+      <ComponentRef Id='LuxObjects2022.dlo' />
+      <ComponentRef Id='LuxMaterial2022.dlt' />
+      <ComponentRef Id='LuxMap2022.dlt' />
+      <ComponentRef Id='dirLANGUAGE' />
+      <ComponentRef Id='LuxMap2022.dlt.mui' />
+      <ComponentRef Id='LuxMaterial2022.dlt.mui' />
+      <ComponentRef Id='LuxObjects2022.dlo.mui' />
+      <ComponentRef Id='dirLUXMAPS' />
+      <ComponentRef Id='MultiAreaLight.jpg' />
+    </ComponentGroup>
     
 		<!--<Feature Id="ProductFeature" Title="MaxToLuxWix" Level="1">
 			<ComponentGroupRef Id="ProductComponents" />
@@ -220,6 +260,12 @@
     <Feature Id='CompleteInstall2021' Title='All Files' Level='1'>
       <Condition Level="0">NOT MAX2021</Condition>
       <ComponentGroupRef Id='Max2021Selected' />
+      <!--<ComponentGroupRef Id='RegistryGroup' />-->
+    </Feature>
+
+    <Feature Id='CompleteInstall2022' Title='All Files' Level='1'>
+      <Condition Level="0">NOT MAX2022</Condition>
+      <ComponentGroupRef Id='Max2022Selected' />
       <!--<ComponentGroupRef Id='RegistryGroup' />-->
     </Feature>
 
