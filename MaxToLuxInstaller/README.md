@@ -1,4 +1,4 @@
 # MaxToLux Installer
 MaxToLux Installer base on Wix toolset 
 
-![alt text](https://3dfine.com/content/MaxToLux-installer-Wix.jpg)
+![alt text](https://www.3dfine.com/content/MaxToLux_installer.jpg)
