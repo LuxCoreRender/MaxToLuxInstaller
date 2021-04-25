@@ -8,7 +8,7 @@
 // AUTHOR: Omid Ghotbi (TAO) omid.ghotbi@gmail.com www.3dfine.com
 //***************************************************************************/-->
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
-	<Product Id="{46F238B5-47BE-4E88-87D6-EDF5151D22F8}" Name="MaxToLuxWix" Language="1033" Version="0.8.7.9" Manufacturer="LuxCoreRenderer" UpgradeCode="1c6476c4-3c1f-478b-8597-7c0f6fe13a9c">
+	<Product Id="{46F238B5-47BE-4E88-87D6-EDF5151D22F8}" Name="MaxToLuxWix" Language="1033" Version="0.8.9.1" Manufacturer="LuxCoreRenderer" UpgradeCode="1c6476c4-3c1f-478b-8597-7c0f6fe13a9c">
 		<Package InstallerVersion="300" Compressed="yes" Platform="x64" InstallScope="perMachine" />
     <Icon Id="icon.ico" SourceFile="Resources\icon.ico"/>
     <Property Id="ARPPRODUCTICON" Value="icon.ico" />

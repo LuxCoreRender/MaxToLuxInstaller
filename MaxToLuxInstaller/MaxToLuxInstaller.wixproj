@@ -6,8 +6,9 @@
     <ProductVersion>3.10</ProductVersion>
     <ProjectGuid>685fba7f-4a79-497b-86f6-ac23f94bca89</ProjectGuid>
     <SchemaVersion>2.0</SchemaVersion>
-    <OutputName>MaxToLux-v0.7.1.7</OutputName>
+    <OutputName>MaxToLux-v0.8.9.1</OutputName>
     <OutputType>Package</OutputType>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <OutputPath>bin\$(Configuration)\</OutputPath>
@@ -52,7 +53,7 @@
     <Content Include="Resources\progressbar.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\RegistrationInfoCustomAction\RegistrationInputCustomAction.csproj">
+    <ProjectReference Include="..\RegistrationInputCustomAction\RegistrationInputCustomAction.csproj">
       <Name>RegistrationInputCustomAction</Name>
       <Project>{971c463f-42fb-45dd-9b45-9f8c5ae6770c}</Project>
       <Private>True</Private>
