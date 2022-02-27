@@ -97,6 +97,7 @@
           <Condition Action="enable"><![CDATA[INSTALLSELECT2020 = "1"]]></Condition>
           <Condition Action="enable"><![CDATA[INSTALLSELECT2021 = "1"]]></Condition>
           <Condition Action="enable"><![CDATA[INSTALLSELECT2022 = "1"]]></Condition>
+          <Publish Property="ROOTDIR" Value="c:\" Order="2"><![CDATA[ROOTDIR = ""]]></Publish>
           <Publish Event="EndDialog" Value="Return">1</Publish>
         </Control>
 
